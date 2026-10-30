@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Climate & Environmental Analytics",
+    "category": "environment",
+    "categoryLabel": "Environment",
+    "description": "Temperature anomalies and canopy metrics",
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_environmental_climate"
+  },
+  {
+    "id": 2,
+    "title": "Urban Zoning & Land Use",
+    "category": "infrastructure",
+    "categoryLabel": "Infrastructure",
+    "description": "Municipal parcel and density grid maps",
+    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/webappviewer/index.html?id=placeholder_urban_planning"
+  },
+  {
+    "id": 3,
+    "title": "Transit Networks & Flow",
+    "category": "infrastructure",
+    "categoryLabel": "Infrastructure",
+    "description": "Transportation corridors and transit lines",
+    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_transportation"
+  },
+  {
+    "id": 4,
+    "title": "Demographic Population Density",
+    "category": "demographics",
+    "categoryLabel": "Demographics",
+    "description": "Population metrics and household distributions",
+    "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/storymaps/stories/placeholder_demographics"
+  },
+  {
+    "id": 5,
+    "title": "Geological Hazards & Seismic Risks",
+    "category": "hazards",
+    "categoryLabel": "Hazards",
+    "description": "Active fault lines and landslide inundation zones",
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_geological_hazards"
+  },
+  {
+    "id": 6,
+    "title": "Renewable Energy Potential",
+    "category": "energy",
+    "categoryLabel": "Energy & Resources",
+    "description": "Solar irradiance and wind energy velocity vectors",
+    "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/instant/slider/index.html?id=placeholder_renewable_energy"
+  },
+  {
+    "id": 7,
+    "title": "Wildlife & Conservation Zones",
+    "category": "environment",
+    "categoryLabel": "Environment",
+    "description": "Protected corridors and biodiversity zones",
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_wildlife_habitats"
+  },
+  {
+    "id": 8,
+    "title": "Healthcare Access & Services",
+    "category": "demographics",
+    "categoryLabel": "Demographics",
+    "description": "Drive-time catchments and facility coverage",
+    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+  }
+]
