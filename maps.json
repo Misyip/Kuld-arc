@@ -76,49 +76,31 @@
 "highlights": [
   {
       "id": 101,
-      "title": "Featured Emergency Response Map",
+      "title": "Līdzdalības budžets",
       "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_emergency"
     },
     {
       "id": 102,
-      "title": "Annual Development Projects 2026",
+      "title": "Kultūrvēsturiskā vide (UNESCO)",
       "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_development"
     },
     {
       "id": 103,
-      "title": "Historical Heritage Protected Zones",
+      "title": "Civilā aizsardzība",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     },
     {
       "id": 104,
-      "title": "Test 1",
+      "title": "Kultūrvietas novadā",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     },
     {
       "id": 105,
-      "title": "Test 2",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
-    },
-    {
-      "id": 106,
-      "title": "Test 3",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
-    },
-    {
-      "id": 107,
-      "title": "Test 4",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
-    },
-    {
-      "id": 108,
-      "title": "Test 5",
+      "title": "Skolēnu autobusu maršruti",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     }
