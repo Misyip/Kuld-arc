@@ -1,4 +1,5 @@
-[
+{
+  "maps": [
   {
     "id": 1,
     "title": "Kuldiga Municipality Basic Data",
@@ -71,4 +72,25 @@
     "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
   }
-]
+],
+"highlights": [
+  {
+      "id": 101,
+      "title": "Featured Emergency Response Map",
+      "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
+      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_emergency"
+    },
+    {
+      "id": 102,
+      "title": "Annual Development Projects 2026",
+      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_development"
+    },
+    {
+      "id": 103,
+      "title": "Historical Heritage Protected Zones",
+      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
+    }
+  ]
+}
