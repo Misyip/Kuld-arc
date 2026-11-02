@@ -2,73 +2,97 @@
   "maps": [
   {
     "id": 1,
-    "title": "Kuldiga Municipality Basic Data",
+    "titleEn": "Kuldiga Municipality Basic Data",
+    "titleLv": "Kuldīgas novada pamatdati",
     "category": "demographics",
-    "categoryLabel": "Demographics",
-    "description": "-",
+    "categoryLabelEn": "Demographics",
+    "categoryLabelLv": "Demogrāfija",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_environmental_climate"
   },
   {
     "id": 2,
-    "title": "Territorial Planning",
+    "titleEn": "Territorial Planning",
+    "titleLv": "Teritorija plānojumi",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/webappviewer/index.html?id=placeholder_urban_planning"
   },
   {
     "id": 3,
-    "title": "Municipal properties",
+    "titleEn": "Municipal properties",
+    "titleLv": "Pašvaldības īpašumi",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_transportation"
   },
   {
     "id": 4,
-    "title": "Car Parking",
+    "titleEn": "Car Parking",
+    "titleLv": "Stāvvietas",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/storymaps/stories/placeholder_demographics"
   },
   {
     "id": 5,
-    "title": "Traffic and Mobility",
+    "titleEn": "Traffic and Mobility",
+    "titleLv": "Satiksme un mobilitāte",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_geological_hazards"
   },
   {
     "id": 6,
-    "title": "Education",
+    "titleEn": "Education",
+    "titleLv": "Izglītība",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/instant/slider/index.html?id=placeholder_renewable_energy"
   },
   {
     "id": 7,
-    "title": "Cemetaries",
+    "titleEn": "Cemetaries",
+    "titleLv": "Kapsētas",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_wildlife_habitats"
   },
   {
     "id": 8,
-    "title": "Municipal Support for Old Town Restoration",
+    "titleEn": "Municipal Support for Old Town Restoration",
+    "titleLv": "Pašvaldības atbalasts vecpilsētas atjaunošanā",
     "category": "infrastructure",
-    "categoryLabel": "Infrastructure",
-    "description": "-",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
+    "descriptionEn": "-",
+    "descriptionLv": "-",
     "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
     "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
   }
@@ -76,31 +100,36 @@
 "highlights": [
   {
       "id": 101,
-      "title": "Līdzdalības budžets",
+      "titleEn": "Participatory Budget",
+      "titleLv": "Līdzdalības budžets",
       "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_emergency"
     },
     {
       "id": 102,
-      "title": "Kultūrvēsturiskā vide (UNESCO)",
+      "titleEn": "Cultural and Historical Environment (UNESCO)",
+      "titleLv": "Kultūrvēsturiskā vide (UNESCO)",
       "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_development"
     },
     {
       "id": 103,
-      "title": "Civilā aizsardzība",
+      "titleEn": "Civil Protection",
+      "titleLv": "Civilā aizsardzība",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     },
     {
       "id": 104,
-      "title": "Kultūrvietas novadā",
+      "titleEn": "Cultural Sites in the Municipality",
+      "titleLv": "Kultūrvietas novadā",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     },
     {
       "id": 105,
-      "title": "Skolēnu autobusu maršruti",
+      "titleEn": "School Bus Routes",
+      "titleLv": "Skolēnu autobusu maršruti",
       "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
       "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
     }
