@@ -45,8 +45,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/storymaps/stories/placeholder_demographics"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/St%C4%81vvietas.png",
+    "mapUrl": "https://www.google.com/maps/d/u/1/viewer?hl=en&ll=56.96795500577736%2C21.963918497260728&z=15&mid=1gzJES1OBDs1GuIv2jLB-kTcgJrgj0O90"
   },
   {
     "id": 5,
