@@ -15,7 +15,7 @@
   {
     "id": 2,
     "titleEn": "Territorial Planning",
-    "titleLv": "Teritoriju plānojumi",
+    "titleLv": "Teritorijas plānojumi",
     "category": "infrastructure",
     "categoryLabelEn": "Infrastructure",
     "categoryLabelLv": "Infrastruktūra",
@@ -87,7 +87,7 @@
   {
     "id": 8,
     "titleEn": "Municipal Support for Old Town Restoration",
-    "titleLv": "Pašvaldības atbalasts vecpilsētas atjaunošanā",
+    "titleLv": "Pašvaldības atbalsts vecpilsētas atjaunošanā",
     "category": "development",
     "categoryLabelEn": "Development",
     "categoryLabelLv": "Attīstība",
