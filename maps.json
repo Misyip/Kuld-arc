@@ -81,8 +81,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_wildlife_habitats"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kaps%C4%93tas.png",
+    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=28878e46ecb54c178cd50ac500f63464"
   },
   {
     "id": 8,
@@ -141,8 +141,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Uz%C5%86%C4%93m%C4%93ju%20katalogs.png",
+    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=cbbc19cba5fc4658be25cf6204468463"
   },
   {
     "id": 13,
@@ -177,8 +177,8 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Pl%C4%81notie%20v%C4%93ja%20un%20saules%20parki.png",
+    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=55927e8f12fd48359b14f55cf0fc5429"
   },
   {
     "id": 16,
