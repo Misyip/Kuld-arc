@@ -33,8 +33,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_transportation"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 4,
@@ -57,8 +57,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/dashboards/placeholder_geological_hazards"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 6,
@@ -69,8 +69,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/instant/slider/index.html?id=placeholder_renewable_energy"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 7,
@@ -93,8 +93,8 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 9,
@@ -105,8 +105,8 @@
     "categoryLabelLv": "Vēsture",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 10,
@@ -117,8 +117,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 11,
@@ -129,8 +129,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 12,
@@ -153,8 +153,8 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 14,
@@ -165,8 +165,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_public_health"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 15,
@@ -189,7 +189,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -201,8 +201,8 @@
     "categoryLabelLv": "Kultūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://saldus.maps.arcgis.com/apps/dashboards/990a68dfe35747f8945eeb5e9b5df752#"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 18,
@@ -213,8 +213,8 @@
     "categoryLabelLv": "Kultūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://saldus.maps.arcgis.com/apps/dashboards/990a68dfe35747f8945eeb5e9b5df752#"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 19,
@@ -225,8 +225,8 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://saldus.maps.arcgis.com/apps/dashboards/990a68dfe35747f8945eeb5e9b5df752#"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   },
   {
     "id": 20,
@@ -237,8 +237,8 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://saldus.maps.arcgis.com/apps/dashboards/990a68dfe35747f8945eeb5e9b5df752#"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "mapUrl": "#"
   }
 ],
 "highlights": [
@@ -246,36 +246,36 @@
       "id": 101,
       "titleEn": "Participatory Budget",
       "titleLv": "Līdzdalības budžets",
-      "imageUrl": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_emergency"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "mapUrl": "#"
     },
     {
       "id": 102,
       "titleEn": "Cultural and Historical Environment (UNESCO)",
       "titleLv": "Kultūrvēsturiskā vide (UNESCO)",
-      "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_development"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kult%C5%ABrv%C4%93sturisk%C4%81%20vide%20%2B%20unesco%20teritorija.png",
+      "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=8818df4472bd46739f556ad53a302bc3"
     },
     {
       "id": 103,
       "titleEn": "Civil Protection",
       "titleLv": "Civilā aizsardzība",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "mapUrl": "#"
     },
     {
       "id": 104,
       "titleEn": "Cultural Sites in the Municipality",
       "titleLv": "Kultūrvietas novadā",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "mapUrl": "#"
     },
     {
       "id": 105,
       "titleEn": "School Bus Routes",
       "titleLv": "Skolēnu autobusu maršruti",
-      "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-      "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=highlight_heritage"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "mapUrl": "#"
     }
   ]
 }
