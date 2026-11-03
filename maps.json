@@ -9,20 +9,20 @@
     "categoryLabelLv": "Demogrāfija",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/mapviewer/index.html?id=placeholder_environmental_climate"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Pamatdati.png",
+    "mapUrl": https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=13f4e337cdd64ae5a010c7053e698505"
   },
   {
     "id": 2,
     "titleEn": "Territorial Planning",
-    "titleLv": "Teritorijas plānojumi",
+    "titleLv": "Teritorijas plānojums",
     "category": "infrastructure",
     "categoryLabelEn": "Infrastructure",
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    "mapUrl": "https://arcgis.com/apps/webappviewer/index.html?id=placeholder_urban_planning"
+    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Teritorijas%20pl%C4%81nojums.png",
+    "mapUrl": "https://experience.arcgis.com/experience/ff4d2c36f74f460c9819569adaaac27f"
   },
   {
     "id": 3,
