@@ -251,18 +251,6 @@
     "descriptionLv": "-",
     "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
     "mapUrl": "#"
-  },
-  { 
-    "id": 22,
-    "titleEn": "TEST 2",
-    "titleLv": "TESTS 2",
-    "category": "test",
-    "categoryLabelEn": "Test",
-    "categoryLabelLv": "Tests",
-    "descriptionEn": "-",
-    "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
-    "mapUrl": "#"
   }
 ],
 "highlights": [
