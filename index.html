@@ -6,8 +6,8 @@
     <title>Geo Kuldīga</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -108,7 +108,7 @@
                     <!-- Search Function Button -->
                     <button id="search-toggle-btn" 
                             class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                        <i class="fa-solid fa-magnifying-glass text-brand-Balts text-xl" id="search-btn-icon"></i>
+                        <span class="material-icons text-brand-Balts text-xl" id="search-btn-icon">search</span>
                     </button>
 
                     <!-- Desktop Language Selector (Visible > half screen / lg: block) -->
@@ -117,7 +117,7 @@
                                 type="button" 
                                 class="inline-flex items-center justify-between gap-2 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-bold text-[18px] tracking-wider border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
                             <span id="desktop-lang-current">LV</span>
-                            <i class="fa-solid fa-chevron-down text-brand-Balts text-xs transition-transform duration-300" id="desktop-lang-chevron"></i>
+                            <span class="material-icons text-brand-Balts text-xl transition-transform duration-300" id="desktop-lang-chevron">expand_more</span>
                         </button>
 
 						<div id="desktop-lang-menu" 
@@ -133,8 +133,8 @@
                     <div class="lg:hidden">
                         <button id="sections-toggle-btn" 
                                 class="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                            <i class="fa-solid fa-bars text-brand-Balts text-xl" id="sections-icon"></i>
-                            <i class="fa-solid fa-chevron-down text-brand-Balts text-sm transition-transform duration-300" id="sections-chevron"></i>
+                            <span class="material-icons text-brand-Balts text-xl" id="sections-icon">menu</span>
+                            <span class="material-icons text-brand-Balts text-xl transition-transform duration-300" id="sections-chevron">expand_more</span>
                         </button>
                     </div>
 
@@ -153,8 +153,8 @@
                     
                     <div class="space-y-6">
                         <div class="items-center text-center justify-between border-b-2 border-brand-KaraliskiZeltainais pb-4">
-                            <span id="site-nav-title" data-en="Site Navigation" data-lv="Vietnes navigācija" class="text-xl font-extrabold tracking-widest uppercase text-brand-KaraliskiZeltainais items-center gap-2">
-                                <i class="fa-solid fa-compass text-brand-KaraliskiZeltainais"></i> Site Navigation
+                            <span id="site-nav-title" data-en="Site Navigation" data-lv="Vietnes navigācija" class="text-xl font-extrabold tracking-widest uppercase text-brand-KaraliskiZeltainais flex items-center justify-center gap-2">
+                                <span class="material-icons text-brand-KaraliskiZeltainais">explore</span> Site Navigation
                             </span>
                         </div>
 
@@ -165,7 +165,7 @@
                                 <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
                                     Kuldīgas novads skaitļos
                                 </span>
-                                <i class="fa-solid fa-arrow-right text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform"></i>
+                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
 
                             <a href="https://example.com/opendata" target="_blank" rel="noopener noreferrer" data-nav-index="1"
@@ -173,7 +173,7 @@
                                 <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
                                     Iesaisties!
                                 </span>
-                                <i class="fa-solid fa-arrow-right text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform"></i>
+                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
 
                             <a href="https://example.com/services" target="_blank" rel="noopener noreferrer" data-nav-index="2"
@@ -181,7 +181,7 @@
                                 <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
                                     Jaunumi
                                 </span>
-                                <i class="fa-solid fa-arrow-right text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform"></i>
+                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
 
                             <a href="https://example.com/contact" target="_blank" rel="noopener noreferrer" data-nav-index="3"
@@ -189,7 +189,7 @@
                                 <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
                                     Rokasgrāmata
                                 </span>
-                                <i class="fa-solid fa-arrow-right text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform"></i>
+                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
                             </a>
                         </nav>
 
@@ -223,18 +223,18 @@
             <span id="map-search-title" data-en="Map Search" data-lv="Karšu meklētājs" class="bg-brand-Balts text-xs font-bold tracking-widest text-brand-KaraliskiZeltainais flex items-center gap-2">
                  Map Search
             </span>
-            <button id="close-floating-search" class="bg-brand-Balts  text-neutral-400 hover:text-brand-Melns text-xs">
-                <i class="fa-solid fa-xmark"></i>
+            <button id="close-floating-search" class="bg-brand-Balts text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
+                <span class="material-icons text-xs">close</span>
             </button>
         </div>
         <div class="relative flex items-center">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 text-brand-KaraliskiZeltainais text-xs"></i>
+            <span class="material-icons absolute left-3 text-brand-KaraliskiZeltainais text-sm">search</span>
             <input type="text" 
                    id="map-search-input" 
                    placeholder="Search maps by title or keyword..." 
                    class="w-full pl-9 pr-8 py-2 rounded-xl bg-brand-Balts border border-neutral-700 text-brand-Melns placeholder-neutral-400 text-xs font-medium focus:outline-none focus:border-brand-KaraliskiZeltainais transition-colors">
-            <button id="clear-search-btn" class="hidden absolute right-3 text-neutral-400 hover:text-brand-Melns text-xs">
-                <i class="fa-solid fa-xmark"></i>
+            <button id="clear-search-btn" class="hidden absolute right-3 text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
+                <span class="material-icons text-xs">close</span>
             </button>
         </div>
     </div>
@@ -264,7 +264,7 @@
         <div class="relative flex items-center gap-2 sm:gap-4">
             <!-- Left Side Prev Button -->
             <button id="highlight-prev" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
-                <i class="fa-solid fa-chevron-left text-sm"></i>
+                <span class="material-icons text-2xl">chevron_left</span>
             </button>
 
             <!-- Slideshow Container -->
@@ -274,7 +274,7 @@
 
             <!-- Right Side Next Button -->
             <button id="highlight-next" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
+                <span class="material-icons text-2xl">chevron_right</span>
             </button>
         </div>
 		
@@ -302,9 +302,9 @@
                         type="button" 
                         class="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-bold text-xs tracking-wider border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
                     <span class="flex items-center gap-2">
-                        <i class="fa-solid fa-filter text-brand-Balts text-xl"></i>
+                        <span class="material-icons text-brand-Balts text-3xl">filter_alt</span>
                     </span>
-                    <i class="fa-solid fa-chevron-down text-brand-Balts text-sm transition-transform duration-300" id="filters-chevron"></i>
+                    <span class="material-icons text-brand-Balts text-3xl transition-transform duration-300" id="filters-chevron">expand_more</span>
                 </button>
 
                 <!-- Checkbox Dropdown Menu -->
@@ -444,7 +444,11 @@
 				
 				// 5. Site Navigation Menu Headers
 				const siteNavTitle = document.getElementById('site-nav-title');
-				if (siteNavTitle) siteNavTitle.textContent = lang === 'EN' ? siteNavTitle.getAttribute('data-en') : siteNavTitle.getAttribute('data-lv');
+				if (siteNavTitle) {
+                    const iconHTML = '<span class="material-icons text-brand-KaraliskiZeltainais">explore</span>';
+                    const text = lang === 'EN' ? siteNavTitle.getAttribute('data-en') : siteNavTitle.getAttribute('data-lv');
+                    siteNavTitle.innerHTML = iconHTML + ' ' + text;
+                }
 
 				// 6. Map Search
 				const MapSearchTitle = document.getElementById('map-search-title');
@@ -556,13 +560,14 @@
 
                         slideItem.innerHTML = `
                             <a href="${item.mapUrl}" target="_blank" rel="noopener noreferrer" class="block w-full">
-                                <div class="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border-[3px] border-brand-KaraliskiZeltainais shadow-md hover:border-brand-LVSarkans transition-all duration-300">
+                                <div class="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border-[3px] border-brand-KaraliskiZeltainais shadow-md group-hover:border-brand-LVSarkans transition-all duration-300">
                                     <img src="${item.imageUrl}" 
                                          alt="${title}" 
-                                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                          onerror="this.onerror=null; this.src='https://placehold.co/600x450/ffffff/000000?text=Highlight';">
                                     
                                     <div class="absolute inset-0 transition-colors duration-300"></div>
+                                    
                                 </div>
                             </a>
                             <div class="mt-2.5 text-center w-full px-1">
@@ -690,6 +695,7 @@
                                      onerror="this.onerror=null; this.src='https://placehold.co/600x600/ffffff/000000?text=${encodeURIComponent(categoryLabel)}';">
                                 
                                 <div class="absolute inset-0 transition-colors duration-150"></div>
+
                             </div>
                         </a>
                         <div class="mt-3.5 text-center">
@@ -757,7 +763,7 @@
                 floatingSearchBar.classList.remove('-translate-x-96', 'opacity-0', 'pointer-events-none');
                 floatingSearchBar.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
                 
-                searchIcon.classList.replace('fa-magnifying-glass', 'fa-xmark');
+                searchIcon.textContent = 'close';
                 searchToggleBtn.classList.add('bg-brand-LVSarkans');
                 setTimeout(() => mapSearchInput.focus(), 300);
             }
@@ -766,7 +772,7 @@
                 floatingSearchBar.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
                 floatingSearchBar.classList.add('-translate-x-96', 'opacity-0', 'pointer-events-none');
                 
-                searchIcon.classList.replace('fa-xmark', 'fa-magnifying-glass');
+                searchIcon.textContent = 'search';
                 searchToggleBtn.classList.remove('bg-brand-LVSarkans');
 
                 if (mapSearchInput.value !== '') {
