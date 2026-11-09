@@ -38,7 +38,6 @@
             background-size: cover;
             opacity: 0.9;
         }
-        /* Hide scrollbar for clean carousel appearance */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -66,12 +65,12 @@
 </head>
 <body class="bg-brand-Balts text-brand-Melns font-sans min-h-screen flex flex-col selection:bg-brand-LVSarkans selection:text-brand-Balts relative">
 
-    <!-- HEADER SECTION -->
+    <!-- Header section -->
     <header class="sticky top-0 z-50 bg-brand-Balts border-b-[4px] border-brand-KaraliskiZeltainais transition-all duration-300 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 gap-4">
                 
-                <!-- Left Side: Logo & Title -->
+                <!-- Left: Logo & Title -->
                 <a href="https://kuldigasnovads.lv/" class="flex items-center gap-3.5 group flex-shrink-0">
                     <div class="w-14 h-14 block focus:outline-none">
                         <img id="header-logo" 
@@ -81,8 +80,8 @@
                     </div>
                 </a>
 
-                <!-- Middle/Right: DESKTOP NAVIGATION BUTTONS (Visible > half screen / lg: flex) -->
-                <!-- EDIT LINKS & TITLES HERE (Shared dynamically with mobile menu) -->
+                <!-- Middle: DESKTOP NAVIGATION BUTTONS -->
+                <!-- EDIT LINKS & TITLES ONLY HERE (Shared dynamically with mobile menu) -->
                 <nav class="hidden lg:flex items-center gap-2 xl:gap-3" id="desktop-nav">
                     <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0" data-en="Riga in Numbers" data-lv="Kuldīgas novads skaitļos"
                        class="px-4 py-2 rounded-xl text-s font-bold tracking-wider text-brand-Melns hover:text-brand-LVSarkans hover:bg-brand-Melns/5 transition-all">
@@ -102,16 +101,16 @@
                     </a>
                 </nav>
 
-                <!-- Right Side: SEARCH BUTTON, DESKTOP LANGUAGE SELECTOR & MOBILE SECTIONS TOGGLE -->
+                <!-- Right: Search button, Desktop language selection button & Mobile section toggle button -->
                 <div class="flex items-center gap-3 flex-shrink-0">
                     
-                    <!-- Search Function Button -->
+                    <!-- Search Button -->
                     <button id="search-toggle-btn" 
                             class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
                         <span class="material-icons text-brand-Balts text-xl" id="search-btn-icon">search</span>
                     </button>
 
-                    <!-- Desktop Language Selector (Visible > half screen / lg: block) -->
+                    <!-- Desktop Language Selection -->
                     <div class="relative hidden lg:inline-block text-left" id="desktop-lang-wrapper">
                         <button id="desktop-lang-toggle-btn" 
                                 type="button" 
@@ -129,7 +128,7 @@
 						</div>
                     </div>
 
-                    <!-- Mobile/Half-Screen Sections Toggle Button (Hidden on larger screens lg:hidden) -->
+                    <!-- Mobile/Half-Screen Sections Toggle Button -->
                     <div class="lg:hidden">
                         <button id="sections-toggle-btn" 
                                 class="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
@@ -143,7 +142,7 @@
             </div>
         </div>
 
-        <!-- DROPPING OVERLAY MENU FOR MOBILE / HALF-SCREEN DESKTOP -->
+        <!-- Drop-down sections menu for mobile / half-screen desktop -->
 		<div id="sections-menu" 
              class="lg:hidden absolute left-0 top-full w-full h-[calc(100vh-5rem)] overflow-hidden pointer-events-none z-40">
             <!-- Inner sliding panel -->
@@ -158,7 +157,7 @@
                             </span>
                         </div>
 
-                        <!-- SUBPAGE LINKS (Dynamically synced with desktop nav items via script) -->
+                        <!-- Subpage links (ONLY CHANGE STYLING HERE, DO NOT CHANGE TEXT) -->
                         <nav class="flex flex-col space-y-3" id="mobile-nav">
                             <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0"
                                class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
@@ -193,7 +192,7 @@
                             </a>
                         </nav>
 
-                        <!-- LANGUAGE SELECTION IN MOBILE SECTIONS DROPDOWN -->
+                        <!-- Language selection in mobile sections drop-down -->
                         <div class="pt-4 border-t border-neutral-200 space-y-2">
 								<div class="text-xs font-bold uppercase tracking-wider text-neutral-500">
 									<span class="text-left">Valoda</span>
@@ -216,7 +215,7 @@
         </div>
     </header>
 
-    <!-- FLOATING SEARCH BAR ELEMENT (Left side of the screen) -->
+    <!-- Floating search bar -->
     <div id="floating-search-bar" 
          class="fixed left-6 top-28 z-40 w-80 bg-brand-Balts border-2 border-brand-KaraliskiZeltainais rounded-2xl shadow-2xl p-4 transform -translate-x-96 opacity-0 pointer-events-none transition-all duration-700 ease-in-out">
         <div class="bg-brand-Balts flex items-center justify-between mb-3 border-b border-brand-KaraliskiZeltainais/30 pb-2">
@@ -239,7 +238,7 @@
         </div>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- Hero section -->
     <section id="hero" class="py-12 md:py-16 bg-brand-Melns border-brand-KaraliskiZeltainais border-b-[4px]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-Left space-y-3">
             <h1 id="hero-title" data-en="Geo Kuldīga" data-lv="Geo Kuldīga" class="text-3xl sm:text-5xl font-black text-brand-Balts tracking-tight uppercase">
@@ -251,7 +250,7 @@
         </div>
     </section>
 
-	<!-- HIGHLIGHTS SLIDESHOW SECTION -->
+	<!-- Highlights slideshow section -->
     <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <!-- Section Header -->
         <div class="mb-6">
@@ -260,34 +259,33 @@
             </h2>
         </div>
 
-        <!-- Slideshow Wrapper with Side Navigation Buttons -->
+        <!-- Slideshow wrapper with side navigation buttons -->
         <div class="relative flex items-center gap-2 sm:gap-4">
-            <!-- Left Side Prev Button -->
+            <!-- Left Side: Prev button -->
             <button id="highlight-prev" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
                 <span class="material-icons text-2xl">chevron_left</span>
             </button>
 
-            <!-- Slideshow Container -->
+            <!-- Slideshow container -->
             <div id="highlights-container" class="flex-grow flex overflow-x-auto no-scrollbar scroll-smooth py-1 px-0">
                 <!-- Dynamically populated via external JSON -->
             </div>
 
-            <!-- Right Side Next Button -->
+            <!-- Right side: Next button -->
             <button id="highlight-next" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
                 <span class="material-icons text-2xl">chevron_right</span>
             </button>
         </div>
 		
-        <!-- Dynamic Page Indicator Dots -->
+        <!-- Highlights page indicator dots -->
         <div id="highlights-pagination" class="flex justify-center items-center gap-2 mt-6">
-            <!-- Rendered via JS -->
         </div>
     </section>
 
-    <!-- MAIN CONTENT: THEMATIC MAPS CATALOG -->
+    <!-- Main content: Thematic Maps -->
     <main id="thematic-maps" class="flex-grow py-9 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
-        <!-- Filter Controls Bar -->
+        <!-- Filter controls -->
         <div class="flex flex-row items-center justify-between pb-8 mb-8 border-b-2 border-brand-KaraliskiZeltainais gap-4">
             <div>
                 <h2 id="maps-title" data-en="Thematic Maps" data-lv="Tematiskās kartes" class="md:text-5xl text-3xl md:text-left text-left font-extrabold text-brand-Melns tracking-tight flex gap-2">
@@ -296,7 +294,7 @@
                 <p id="maps-desc" data-en="Click on any map thumbnail below to open the full size map." data-lv="Noklikšķiniet uz jebkuras kartes attēlu, lai atvērtu karti pilnā izmērā." class="md:text-lg text-[8px] md:text-left text-left text-neutral-500 mt-1">Click on any map thumbnail below to open the full size map.</p>
             </div>
 
-            <!-- Dynamic Interactive Filters Dropdown -->
+            <!-- Dynamic filters drop-down -->
             <div class="relative inline-block text-left" id="filters-dropdown-wrapper">
                 <button id="filters-toggle-btn" 
                         type="button" 
@@ -307,11 +305,10 @@
                     <span class="material-icons text-brand-Balts text-3xl transition-transform duration-300" id="filters-chevron">expand_more</span>
                 </button>
 
-                <!-- Checkbox Dropdown Menu -->
+                <!-- Checkbox drop-down menu -->
                 <div id="filters-menu" 
                      class="hidden absolute right-0 mt-3 w-60 rounded-2xl bg-brand-Balts border-2 border-black shadow-2xl z-50 overflow-hidden transform transition-all duration-200 divide-y divide-neutral-200">
                     <div id="dynamic-filter-checkboxes" class="p-3.5 space-y-2.5">
-                        <!-- Dynamic Category Checkboxes Rendered via JS -->
                     </div>
                     <div class="p-2.5 bg-neutral-50 flex items-center justify-between">
                         <button id="clear-filters-btn" type="button" class="text-[11px] font-bold text-brand-LVSarkans hover:underline px-1">
@@ -322,18 +319,18 @@
             </div>
         </div>
 
-        <!-- THEMATIC MAPS GRID -->
+        <!-- Thematic maps grid -->
         <div class="flex flex-wrap justify-center gap-8" id="map-grid">
             <!-- Map cards are dynamically loaded via external JSON -->
         </div>
 
-        <!-- NO RESULTS PLACEHOLDER -->
+        <!-- No results placeholder -->
         <div id="no-results" class="hidden text-center py-16">
             <p class="text-neutral-500 font-bold text-sm uppercase tracking-wider">No maps found matching your search or filters.</p>
         </div>
     </main>
 
-    <!-- CENTERED FOOTER SECTION -->
+    <!-- Footer section -->
     <footer class="relative z-40 bg-brand-Melns text-brand-Balts py-10 md:py-12 border-t-4 border-brand-KaraliskiZeltainais mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center justify-center text-center space-y-5">
@@ -362,13 +359,13 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVITY & EXTERNAL JSON FETCH SCRIPT -->
+    <!-- Interactivity & external JSON fetch -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Dynamic copyright year
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-            // Element Selectors
+            // Element selectors
             const mapGrid = document.getElementById('map-grid');
             const highlightsContainer = document.getElementById('highlights-container');
             const highlightPrev = document.getElementById('highlight-prev');
@@ -394,7 +391,7 @@
             const clearFiltersBtn = document.getElementById('clear-filters-btn');
             const noResults = document.getElementById('no-results');
 
-            // Language Selector Elements
+            // Language selector elements
             const desktopLangToggleBtn = document.getElementById('desktop-lang-toggle-btn');
             const desktopLangMenu = document.getElementById('desktop-lang-menu');
             const desktopLangChevron = document.getElementById('desktop-lang-chevron');
@@ -523,7 +520,7 @@
             // Initialize default language
             setLanguage('LV');
 
-            // --- RENDER HIGHLIGHTS SLIDESHOW WITH DYNAMIC LANGUAGE SUPPORT ---
+            // Render highlights slideshow with dynamic language support
             let currentHighlightPage = 0;
             let totalHighlightPages = 1;
 
@@ -624,7 +621,7 @@
                 }
             }
 
-            // Navigation Buttons
+            // Navigation buttons
 			highlightPrev?.addEventListener('click', () => {
                 if (totalHighlightPages > 0) {
                     if (currentHighlightPage > 0) {
@@ -674,7 +671,7 @@
                 }
             });
 
-            // --- 1. RENDER MAP CARDS DYNAMICALLY WITH LANGUAGE SUPPORT ---
+            // 1. Render map cards dynamically with language support
             function renderMapCards(data, lang) {
                 mapGrid.innerHTML = '';
 				data.forEach(item => {
@@ -709,7 +706,7 @@
                 });
             }
 
-            // --- 2. RENDER FILTERS DYNAMICALLY WITH LANGUAGE SUPPORT ---
+            // 2. Render filters dynamically with language support
             function renderCategoriesUI(data, lang) {
                 const categoriesMap = new Map();
                 data.forEach(item => {
@@ -732,7 +729,7 @@
                 });
             }
 
-            // --- 3. FETCH JSON DATA FROM EXTERNAL FILE ---
+            // 3. Fetch JSON data
             const jsonFileUrl = 'https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/maps.json'; 
 
             fetch(jsonFileUrl)
@@ -758,7 +755,7 @@
                     mapGrid.innerHTML = '<p class="text-red-600 font-bold text-center col-span-full">Failed to load map cards configuration.</p>';
                 });
 
-            // --- FLOATING SEARCH BAR LOGIC ---
+            // Search bar logic
             function openSearch() {
                 floatingSearchBar.classList.remove('-translate-x-96', 'opacity-0', 'pointer-events-none');
                 floatingSearchBar.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
@@ -826,7 +823,7 @@
                 mapSearchInput.focus();
             });
 
-            // --- SECTIONS MENU LOGIC ---
+            // Sections menu logic
 			sectionsBtn?.addEventListener('click', (e) => {
 				e.stopPropagation();
 				const isClosed = sectionsMenuPanel?.classList.contains('-translate-y-full');
@@ -858,7 +855,7 @@
                 });
             });
 
-            // --- FILTERS DROPDOWN LOGIC ---
+            // Filters drop-down logic
 			filtersBtn?.addEventListener('click', (e) => {
 				e.stopPropagation();
 				const isHidden = filtersMenu.classList.contains('hidden');
@@ -871,7 +868,7 @@
 				}
 			});
 
-            // --- COMBINED FILTERING & SEARCH ROUTINE ---
+            // Combined filtering & search
             function applyFiltersAndSearch() {
                 const selectedCategories = Array.from(document.querySelectorAll('.filter-checkbox'))
                     .filter(cb => cb.checked)
