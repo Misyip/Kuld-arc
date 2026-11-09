@@ -253,8 +253,8 @@
       "id": 102,
       "titleEn": "Cultural and Historical Environment (UNESCO)",
       "titleLv": "Kultūrvēsturiskā vide (UNESCO)",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kult%C5%ABrv%C4%93sturisk%C4%81%20vide%20%2B%20unesco%20teritorija.png",
-      "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=8818df4472bd46739f556ad53a302bc3"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "mapUrl": "#"
     },
     {
       "id": 103,
@@ -267,8 +267,8 @@
       "id": 104,
       "titleEn": "Cultural Sites in the Municipality",
       "titleLv": "Kultūrvietas novadā",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
-      "mapUrl": "#"
+      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kult%C5%ABrv%C4%93sturisk%C4%81%20vide%20%2B%20unesco%20teritorija.png",
+      "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=8818df4472bd46739f556ad53a302bc3"
     },
     {
       "id": 105,
