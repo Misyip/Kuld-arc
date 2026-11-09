@@ -220,7 +220,7 @@
     <div id="floating-search-bar" 
          class="fixed left-6 top-28 z-40 w-80 bg-brand-Balts border-2 border-brand-KaraliskiZeltainais rounded-2xl shadow-2xl p-4 transform -translate-x-96 opacity-0 pointer-events-none transition-all duration-700 ease-in-out">
         <div class="bg-brand-Balts flex items-center justify-between mb-3 border-b border-brand-KaraliskiZeltainais/30 pb-2">
-            <span class="bg-brand-Balts text-xs font-bold uppercase tracking-widest text-brand-KaraliskiZeltainais flex items-center gap-2">
+            <span id="map-search-title" class="bg-brand-Balts text-xs font-bold uppercase tracking-widest data-en="Map Search" data-lv="Karšu meklētājs" text-brand-KaraliskiZeltainais flex items-center gap-2">
                  Map Search
             </span>
             <button id="close-floating-search" class="bg-brand-Balts  text-neutral-400 hover:text-brand-Melns text-xs">
@@ -446,7 +446,11 @@
 				const siteNavTitle = document.getElementById('site-nav-title');
 				if (siteNavTitle) siteNavTitle.textContent = lang === 'EN' ? siteNavTitle.getAttribute('data-en') : siteNavTitle.getAttribute('data-lv');
 
-                // 6. Footer Section
+				// 6. Map Search
+				const MapSearchTitle = document.getElementById('map-search-title');
+				if (MapSearchTitle) MapSearchTitle.textContent = lang === 'EN' ? MapSearchTitle.getAttribute('data-en') : MapSearchTitle.getAttribute('data-lv');
+
+                // 7. Footer Section
                 const footerTitle = document.getElementById('footer-title');
                 const footerCopy = document.getElementById('footer-copy');
                 const footerPrivacyBtn = document.getElementById('footer-privacy-btn');
