@@ -4,13 +4,13 @@
     "id": 1,
     "titleEn": "Kuldiga Municipality Basic Data",
     "titleLv": "Kuldīgas novada pamatdati",
-    "category": "demographics",
-    "categoryLabelEn": "Demographics",
-    "categoryLabelLv": "Demogrāfija",
+    "category": "infrastructure",
+    "categoryLabelEn": "Infrastructure",
+    "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
     "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Pamatdati.png",
-    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=13f4e337cdd64ae5a010c7053e698505"
+    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=c2146a7a53974113aa12e11e97e7ef30"
   },
   {
     "id": 2,
@@ -142,7 +142,7 @@
     "descriptionEn": "-",
     "descriptionLv": "-",
     "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Uz%C5%86%C4%93m%C4%93ju%20katalogs.png",
-    "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=cbbc19cba5fc4658be25cf6204468463"
+    "mapUrl": "https://experience.arcgis.com/experience/142bd46b212240d8a8e01caf536e4b7c"
   },
   {
     "id": 13,
