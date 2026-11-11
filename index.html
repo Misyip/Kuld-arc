@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geo Kuldīga</title>
-    <!-- Tailwind CSS CDN, SHOULD BE CHANGED TO A FULL IMPORT -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,6 +20,7 @@
                             LVSarkans: '#782729',
                             KaraliskiZeltainais: '#bc923c',
                             Melns: '#1d1d1b',
+							DakstinuOkeris: '#a6580f',
                             Balts: '#f9f7f7'
                         }
                     },
@@ -61,303 +62,391 @@
 		#highlights-container {
             scroll-behavior: smooth;
         }
+
+        /* Accessibility Styles & Modifiers */
+        body.access-text-lg { font-size: 1.15rem; }
+        body.access-text-xl { font-size: 1.3rem; }
+        body.access-high-contrast { background-color: #000000 !important; color: #ffff00 !important; }
+        body.access-high-contrast * { background-color: #000000 !important; color: #ffff00 !important; border-color: #ffff00 !important; }
+        body.access-high-contrast img,
+        body.access-high-contrast .relative > div.absolute { background-color: transparent !important; }
+        body.access-neg-contrast { background-color: #000000 !important; color: #ffffff !important; }
+        body.access-neg-contrast * { background-color: #000000 !important; color: #ffffff !important; border-color: #ffffff !important; }
+        body.access-neg-contrast img,
+        body.access-neg-contrast .relative > div.absolute { background-color: transparent !important; }
+        body.access-underline-links a { text-decoration: underline !important; text-underline-offset: 3px; }
+        body.access-bold-text * { font-weight: 700 !important; }
+        
+        /* Grayscale applied via wrapper or class without breaking fixed positioning */
+        body.access-melnbalts #page-content-wrapper { filter: grayscale(100%); }
     </style>
 </head>
 <body class="bg-brand-Balts text-brand-Melns font-sans min-h-screen flex flex-col selection:bg-brand-LVSarkans selection:text-brand-Balts relative">
 
-    <!-- Header section -->
-    <header class="sticky top-0 z-50 bg-brand-Balts border-b-[4px] border-brand-KaraliskiZeltainais transition-all duration-300 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 gap-4">
-                
-                <!-- Left: Logo & Title -->
-                <a href="https://kuldigasnovads.lv/" class="flex items-center gap-3.5 group flex-shrink-0">
-                    <div class="w-14 h-14 block focus:outline-none">
-                        <img id="header-logo" 
-                             src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_raustits.svg" 
-                             alt="Kuldiga Logo" 
-                             class="w-full h-full object-contain transition-transform hover:scale-125">
-                    </div>
-                </a>
+    <!-- ACCESSIBILITY MENU & TOGGLE BUTTON (FIXED POSITION ISOLATED OUTSIDE FILTER WRAPPER) -->
+    <div class="fixed right-0 top-36 z-50 flex items-start select-none" id="accessibility-container">
+        <!-- Toggle Button -->
+        <button id="accessibility-toggle-btn" 
+                class="w-14 h-14 bg-[#bc923c] text-white flex items-center justify-center shadow-lg hover:bg-[#a6580f] transition-colors focus:outline-none cursor-pointer"
+                aria-label="Accessibility Settings">
+            <span class="material-icons text-3xl">accessibility_new</span>
+        </button>
 
-                <!-- Middle: DESKTOP NAVIGATION BUTTONS -->
-                <!-- EDIT LINKS & TITLES ONLY HERE (Shared dynamically with mobile menu) -->
-                <nav class="hidden lg:flex items-center gap-2 xl:gap-3" id="desktop-nav">
-                    <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0" data-en="Riga in Numbers" data-lv="Kuldīgas novads skaitļos"
-                       class="px-4 py-2 rounded-xl text-s font-bold tracking-wider text-brand-Melns hover:text-brand-LVSarkans hover:bg-brand-Melns/5 transition-all">
-                        Kuldīgas novads skaitļos
-                    </a>
-                    <a href="https://example.com/opendata" target="_blank" rel="noopener noreferrer" data-nav-index="1" data-en="Get involved!" data-lv="Iesaisties!"
-                       class="px-4 py-2 rounded-xl text-s font-bold tracking-wider text-brand-Melns hover:text-brand-LVSarkans hover:bg-brand-Melns/5 transition-all">
-                        Iesaisties!
-                    </a>
-                    <a href="https://kuldigasnovads.lv/category/aktualitates/" target="_blank" rel="noopener noreferrer" data-nav-index="2" data-en="News" data-lv="Jaunumi"
-                       class="px-4 py-2 rounded-xl text-s font-bold tracking-wider text-brand-Melns hover:text-brand-LVSarkans hover:bg-brand-Melns/5 transition-all">
-                        Jaunumi
-                    </a>
-                    <a href="https://example.com/contact" target="_blank" rel="noopener noreferrer" data-nav-index="3" data-en="Handbook" data-lv="Rokasgrāmata"
-                       class="px-4 py-2 rounded-xl text-s font-bold tracking-wider text-brand-Melns hover:text-brand-LVSarkans hover:bg-brand-Melns/5 transition-all">
-                        Rokasgrāmata
-                    </a>
-                </nav>
-
-                <!-- Right: Search button, Desktop language selection button & Mobile section toggle button -->
-                <div class="flex items-center gap-3 flex-shrink-0">
-                    
-                    <!-- Search Button -->
-                    <button id="search-toggle-btn" 
-                            class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                        <span class="material-icons text-brand-Balts text-xl" id="search-btn-icon">search</span>
-                    </button>
-
-                    <!-- Desktop Language Selection -->
-                    <div class="relative hidden lg:inline-block text-left" id="desktop-lang-wrapper">
-                        <button id="desktop-lang-toggle-btn" 
-                                type="button" 
-                                class="inline-flex items-center justify-between gap-2 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-bold text-[18px] tracking-wider border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                            <span id="desktop-lang-current">LV</span>
-                            <span class="material-icons text-brand-Balts text-xl transition-transform duration-300" id="desktop-lang-chevron">expand_more</span>
-                        </button>
-
-						<div id="desktop-lang-menu" 
-							 class="hidden absolute right-0 mt-2 w-20 rounded-xl bg-brand-Balts border-2 border-brand-KaraliskiZeltainais shadow-2xl z-50 overflow-hidden transform transition-all duration-200">
-							<div class="flex flex-col">
-								<button type="button" data-lang="LV" class="desktop-lang-option w-full text-center px-3 py-2.5 text-[15px] font-extrabold text-brand-Melns hover:bg-brand-LVSarkans hover:text-brand-Balts transition-colors rounded-t-lg">LV</button>
-								<button type="button" data-lang="EN" class="desktop-lang-option w-full text-center px-3 py-2.5 text-[15px] font-extrabold text-brand-Melns hover:bg-brand-LVSarkans hover:text-brand-Balts transition-colors rounded-b-lg">EN</button>
-							</div>
-						</div>
-                    </div>
-
-                    <!-- Mobile/Half-Screen Sections Toggle Button -->
-                    <div class="lg:hidden">
-                        <button id="sections-toggle-btn" 
-                                class="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-semibold text-xs tracking-wider uppercase border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                            <span class="material-icons text-brand-Balts text-xl" id="sections-icon">menu</span>
-                            <span class="material-icons text-brand-Balts text-xl transition-transform duration-300" id="sections-chevron">expand_more</span>
-                        </button>
-                    </div>
-
-                </div>
-
+        <!-- Dropdown Menu Box -->
+        <div id="accessibility-menu" class="hidden w-64 bg-white border-2 border-[#bc923c] shadow-2xl p-4 flex flex-col space-y-3.5 text-[#1d1d1b] text-sm">
+            <div class="font-bold text-base text-[#1d1d1b] pb-1 border-b border-neutral-200" data-en="Accessibility" data-lv="Piekļūstamība">
+                Piekļūstamība
             </div>
-        </div>
-
-        <!-- Drop-down sections menu for mobile / half-screen desktop -->
-		<div id="sections-menu" 
-             class="lg:hidden absolute left-0 top-full w-full h-[calc(100vh-5rem)] overflow-hidden pointer-events-none z-40">
-            <!-- Inner sliding panel -->
-            <div id="sections-menu-panel" 
-                 class="w-full h-full bg-brand-Balts/95 backdrop-blur-md border-b-4 border-brand-KaraliskiZeltainais shadow-2xl transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out overflow-y-auto">
-                <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col justify-between h-full pb-24">
-                    
-                    <div class="space-y-6">
-                        <div class="items-center text-center justify-between border-b-2 border-brand-KaraliskiZeltainais pb-4">
-                            <span id="site-nav-title" data-en="Site Navigation" data-lv="Vietnes navigācija" class="text-xl font-extrabold tracking-widest uppercase text-brand-KaraliskiZeltainais flex items-center justify-center gap-2">
-                                <span class="material-icons text-brand-KaraliskiZeltainais">explore</span> Site Navigation
-                            </span>
-                        </div>
-
-                        <!-- Subpage links (ONLY CHANGE STYLING HERE, DO NOT CHANGE TEXT) -->
-                        <nav class="flex flex-col space-y-3" id="mobile-nav">
-                            <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0"
-                               class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
-                                <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
-                                    Kuldīgas novads skaitļos
-                                </span>
-                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
-
-                            <a href="https://example.com/opendata" target="_blank" rel="noopener noreferrer" data-nav-index="1"
-                               class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
-                                <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
-                                    Iesaisties!
-                                </span>
-                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
-
-                            <a href="https://example.com/services" target="_blank" rel="noopener noreferrer" data-nav-index="2"
-                               class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
-                                <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
-                                    Jaunumi
-                                </span>
-                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
-
-                            <a href="https://example.com/contact" target="_blank" rel="noopener noreferrer" data-nav-index="3"
-                               class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
-                                <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
-                                    Rokasgrāmata
-                                </span>
-                                <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                            </a>
-                        </nav>
-
-                        <!-- Language selection in mobile sections drop-down -->
-                        <div class="pt-4 border-t border-neutral-200 space-y-2">
-								<div class="text-xs font-bold uppercase tracking-wider text-neutral-500">
-									<span class="text-left">Valoda</span>
-									<span class="text-right">Language</span>
-								</div>
-									<div class="flex flex-col grid grid-cols-2 gap-2" id="mobile-lang-container">
-										<button type="button" data-lang="LV" class="mobile-lang-btn py-3 rounded-xl border-2 border-neutral-200 bg-brand-Balts text-xs font-extrabold uppercase tracking-wider text-brand-Melns hover:border-brand-KaraliskiZeltainais transition-all shadow-sm">
-											LV
-										</button>
-										<button type="button" data-lang="EN" class="mobile-lang-btn py-3 rounded-xl border-2 border-neutral-200 bg-brand-Balts text-xs font-extrabold uppercase tracking-wider text-brand-Melns hover:border-brand-KaraliskiZeltainais transition-all shadow-sm">
-											EN
-										</button>
-									</div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Floating search bar -->
-    <div id="floating-search-bar" 
-         class="fixed left-6 top-28 z-40 w-80 bg-brand-Balts border-2 border-brand-KaraliskiZeltainais rounded-2xl shadow-2xl p-4 transform -translate-x-96 opacity-0 pointer-events-none transition-all duration-700 ease-in-out">
-        <div class="bg-brand-Balts flex items-center justify-between mb-3 border-b border-brand-KaraliskiZeltainais/30 pb-2">
-            <span id="map-search-title" data-en="Map Search" data-lv="Karšu meklētājs" class="bg-brand-Balts text-xs font-bold tracking-widest text-brand-KaraliskiZeltainais flex items-center gap-2">
-                 Map Search
-            </span>
-            <button id="close-floating-search" class="bg-brand-Balts text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
-                <span class="material-icons text-xs">close</span>
+            
+            <button type="button" id="access-larger" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">zoom_in</span>
+                <span data-en="Enlarge text" data-lv="Palielināt tekstu">Palielināt tekstu</span>
             </button>
-        </div>
-        <div class="relative flex items-center">
-            <span class="material-icons absolute left-3 text-brand-KaraliskiZeltainais text-sm">search</span>
-            <input type="text" 
-                   id="map-search-input" 
-                   placeholder="Search maps by title or keyword..." 
-                   class="w-full pl-9 pr-8 py-2 rounded-xl bg-brand-Balts border border-neutral-700 text-brand-Melns placeholder-neutral-400 text-xs font-medium focus:outline-none focus:border-brand-KaraliskiZeltainais transition-colors">
-            <button id="clear-search-btn" class="hidden absolute right-3 text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
-                <span class="material-icons text-xs">close</span>
+
+            <button type="button" id="access-smaller" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">zoom_out</span>
+                <span data-en="Reduce text" data-lv="Samazināt tekstu">Samazināt tekstu</span>
+            </button>
+
+            <button type="button" id="access-grayscale" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">view_week</span>
+                <span data-en="Black and white" data-lv="Melnbalts">Melnbalts</span>
+            </button>
+
+            <button type="button" id="access-contrast" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">contrast</span>
+                <span data-en="High contrast" data-lv="Augsts kontrasts">Augsts kontrasts</span>
+            </button>
+
+            <button type="button" id="access-neg-contrast" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">visibility</span>
+                <span data-en="Negative contrast" data-lv="Negatīvs kontrasts">Negatīvs kontrasts</span>
+            </button>
+
+            <button type="button" id="access-underline" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">link</span>
+                <span data-en="Underlined links" data-lv="Saites pasvītrotas">Saites pasvītrotas</span>
+            </button>
+
+            <button type="button" id="access-bold" class="flex items-center gap-3 text-left hover:text-[#bc923c] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#bc923c]">format_bold</span>
+                <span data-en="Bold text" data-lv="Treknāki burti">Treknāki burti</span>
+            </button>
+
+            <button type="button" id="access-reset" class="flex items-center gap-3 text-left pt-2 border-t border-neutral-200 hover:text-[#782729] transition-colors group">
+                <span class="material-icons text-base text-neutral-700 group-hover:text-[#782729]">refresh</span>
+                <span data-en="Reset" data-lv="Reset">Reset</span>
             </button>
         </div>
     </div>
 
-    <!-- Hero section -->
-    <section id="hero" class="py-12 md:py-16 bg-brand-Melns border-brand-KaraliskiZeltainais border-b-[4px]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-Left space-y-3">
-            <h1 id="hero-title" data-en="Geo Kuldīga" data-lv="Geo Kuldīga" class="text-3xl sm:text-5xl font-black text-brand-Balts tracking-tight uppercase">
-                Geo Kuldīga
-            </h1>
-            <h3 id="hero-desc" data-en="The Kuldiga Municipality data publishing portal, where anyone can view and use the geospatial information about the administrative territory of Kuldiga held by the municipality." data-lv="Kuldīgas novada pašvaldības datu publicēšanas portāls, kurā ikviens var apskatīt un lietot pašvaldības rīcībā esošo ģeotelpisko informāciju par Kuldīgas novada administratīvo teritoriju." class="md:text-lg text-sm text-brand-Balts tracking-tight text-justify font-bold md:w-1/2">
-                The Kuldiga Municipality data publishing portal, where anyone can view and use the geospatial information about the administrative territory of Kuldiga held by the municipality.
-            </h3>
-        </div>
-    </section>
+    <!-- Page Content Wrapper to isolate filters -->
+    <div id="page-content-wrapper" class="flex flex-col min-h-screen">
 
-	<!-- Highlights slideshow section -->
-    <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <!-- Section Header -->
-        <div class="mb-6">
-            <h2 id="highlights-title" data-en="Highlights" data-lv="Aktualitātes" class="md:text-5xl text-3xl md:text-center text-center font-extrabold text-brand-Melns tracking-tight gap-2">
-                Highlights
-            </h2>
-        </div>
+        <!-- Header section -->
+        <header class="sticky top-0 z-40 bg-brand-Balts shadow-md transition-all duration-300 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20 gap-4">
+                    
+                    <!-- Left: Logo & Title -->
+                    <a href="https://kuldigasnovads.lv/" class="flex items-center gap-3.5 group flex-shrink-0">
+                        <div class="w-14 h-14 block focus:outline-none">
+                            <img id="header-logo" 
+                                 src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_melns.svg" 
+                                 alt="Kuldiga Logo" 
+                                 class="w-full h-full object-contain transition-transform hover:scale-125">
+                        </div>
+                    </a>
 
-        <!-- Slideshow wrapper with side navigation buttons -->
-        <div class="relative flex items-center gap-2 sm:gap-4">
-            <!-- Left Side: Prev button -->
-            <button id="highlight-prev" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
-                <span class="material-icons text-2xl">chevron_left</span>
-            </button>
+                    <!-- Middle: DESKTOP NAVIGATION BUTTONS -->
+                    <nav class="hidden lg:flex items-center gap-2 xl:gap-3" id="desktop-nav">
+                        <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0" data-en="Riga in Numbers" data-lv="Kuldīgas novads skaitļos"
+                           class="px-4 py-2 rounded-xl text-s tracking-wider text-brand-Melns hover:text-brand-Melns hover:bg-brand-KaraliskiZeltainais/25 transition-all">
+                            Kuldīgas novads skaitļos
+                        </a>
+                        <a href="https://example.com/opendata" target="_blank" rel="noopener noreferrer" data-nav-index="1" data-en="Get involved!" data-lv="Iesaisties!"
+                           class="px-4 py-2 rounded-xl text-s tracking-wider text-brand-Melns hover:text-brand-Melns hover:bg-brand-KaraliskiZeltainais/25 transition-all">
+                            Iesaisties!
+                        </a>
+                        <a href="https://kuldigasnovads.lv/category/aktualitates/" target="_blank" rel="noopener noreferrer" data-nav-index="2" data-en="News" data-lv="Jaunumi"
+                           class="px-4 py-2 rounded-xl text-s tracking-wider text-brand-Melns hover:text-brand-Melns hover:bg-brand-KaraliskiZeltainais/25 transition-all">
+                            Jaunumi
+                        </a>
+                        <a href="https://example.com/contact" target="_blank" rel="noopener noreferrer" data-nav-index="3" data-en="Handbook" data-lv="Rokasgrāmata"
+                           class="px-4 py-2 rounded-xl text-s tracking-wider text-brand-Melns hover:text-brand-Melns hover:bg-brand-KaraliskiZeltainais/25 transition-all">
+                            Rokasgrāmata
+                        </a>
+                    </nav>
 
-            <!-- Slideshow container -->
-            <div id="highlights-container" class="flex-grow flex overflow-x-auto no-scrollbar scroll-smooth py-1 px-0">
-                <!-- Dynamically populated via external JSON -->
-            </div>
-
-            <!-- Right side: Next button -->
-            <button id="highlight-next" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts flex items-center justify-center hover:bg-brand-LVSarkans transition-colors shadow-sm focus:outline-none z-10">
-                <span class="material-icons text-2xl">chevron_right</span>
-            </button>
-        </div>
-		
-        <!-- Highlights page indicator dots -->
-        <div id="highlights-pagination" class="flex justify-center items-center gap-2 mt-6">
-        </div>
-    </section>
-
-    <!-- Main content: Thematic Maps -->
-    <main id="thematic-maps" class="flex-grow py-9 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        
-        <!-- Filter controls -->
-        <div class="flex flex-row items-center justify-between pb-8 mb-8 border-b-2 border-brand-KaraliskiZeltainais gap-4">
-            <div>
-                <h2 id="maps-title" data-en="Thematic Maps" data-lv="Tematiskās kartes" class="md:text-5xl text-3xl md:text-left text-left font-extrabold text-brand-Melns tracking-tight flex gap-2">
-                    Thematic Maps
-                </h2>
-                <p id="maps-desc" data-en="Click on any map thumbnail below to open the full size map." data-lv="Noklikšķiniet uz jebkuras kartes attēlu, lai atvērtu karti pilnā izmērā." class="md:text-lg text-[8px] md:text-left text-left text-neutral-500 mt-1">Click on any map thumbnail below to open the full size map.</p>
-            </div>
-
-            <!-- Dynamic filters drop-down -->
-            <div class="relative inline-block text-left" id="filters-dropdown-wrapper">
-                <button id="filters-toggle-btn" 
-                        type="button" 
-                        class="inline-flex items-center justify-between gap-3 px-4 py-2.5 rounded-xl bg-brand-KaraliskiZeltainais text-brand-Balts hover:bg-brand-LVSarkans font-bold text-xs tracking-wider border border-brand-KaraliskiZeltainais hover:border-brand-LVSarkans shadow-sm transition-all duration-300 focus:outline-none">
-                    <span class="flex items-center gap-2">
-                        <span class="material-icons text-brand-Balts text-3xl">filter_alt</span>
-                    </span>
-                    <span class="material-icons text-brand-Balts text-3xl transition-transform duration-300" id="filters-chevron">expand_more</span>
-                </button>
-
-                <!-- Checkbox drop-down menu -->
-                <div id="filters-menu" 
-                     class="hidden absolute right-0 mt-3 w-60 rounded-2xl bg-brand-Balts border-2 border-black shadow-2xl z-50 overflow-hidden transform transition-all duration-200 divide-y divide-neutral-200">
-                    <div id="dynamic-filter-checkboxes" class="p-3.5 space-y-2.5">
-                    </div>
-                    <div class="p-2.5 bg-neutral-50 flex items-center justify-between">
-                        <button id="clear-filters-btn" type="button" class="text-[11px] font-bold text-brand-LVSarkans hover:underline px-1">
-                            Clear Filters
+                    <!-- Right: Search button, Desktop language selection button & Mobile section toggle button -->
+                    <div class="flex items-center gap-3 flex-shrink-0">
+                        
+                        <!-- Search Button -->
+                        <button id="search-toggle-btn" 
+                                class="flex items-center gap-2 px-3 py-2.5 text-brand-Melns font-semibold text-xs tracking-wider uppercase">
+                            <span class="material-icons text-xl" id="search-btn-icon">search</span>
                         </button>
+
+                        <!-- Desktop Language Selection -->
+                        <div class="relative hidden lg:inline-block text-left" id="desktop-lang-wrapper">
+                            <button id="desktop-lang-toggle-btn" 
+                                    type="button" 
+                                    class="inline-flex items-center rounded-xl justify-between gap-2 px-4 py-2.5 text-brand-Melns text-[17px] tracking-wider">
+                                <span id="desktop-lang-current">LV</span>
+                                <span class="material-icons text-[20px] transition-transform duration-300" id="desktop-lang-chevron">expand_more</span>
+                            </button>
+
+                            <div id="desktop-lang-menu" 
+                                 class="hidden absolute right-0 mt-2 w-20 rounded-xl bg-brand-Balts border-2 border-brand-KaraliskiZeltainais shadow-2xl z-50 overflow-hidden transform transition-all duration-200">
+                                <div class="flex flex-col">
+                                    <button type="button" data-lang="LV" class="desktop-lang-option w-full text-center px-3 py-2.5 text-[15px] font-extrabold text-brand-Melns hover:bg-brand-KaraliskiZeltainais hover:text-brand-Balts transition-colors rounded-t-lg">LV</button>
+                                    <button type="button" data-lang="EN" class="desktop-lang-option w-full text-center px-3 py-2.5 text-[15px] font-extrabold text-brand-Melns hover:bg-brand-KaraliskiZeltainais hover:text-brand-Balts transition-colors rounded-b-lg">EN</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile/Half-Screen Sections Toggle Button -->
+                        <div class="lg:hidden">
+                            <button id="sections-toggle-btn" 
+                                    class="flex items-center gap-2.5 py-2.5 text-brand-Melns font-semibold text-xs tracking-wider uppercase">
+                                <span class="material-icons text-xl" id="sections-icon">menu</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Drop-down sections menu for mobile / half-screen desktop -->
+            <div id="sections-menu" 
+                 class="lg:hidden absolute left-0 top-full w-full h-[calc(100vh-5rem)] overflow-hidden pointer-events-none z-40">
+                <div id="sections-menu-panel" 
+                     class="w-full h-full bg-brand-Balts/95 backdrop-blur-md border-b-4 border-brand-KaraliskiZeltainais shadow-2xl transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out overflow-y-auto">
+                    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col justify-between h-full pb-24">
+                        
+                        <div class="space-y-6">
+                            <div class="items-center text-center justify-between border-b-2 border-brand-KaraliskiZeltainais pb-4">
+                                <span id="site-nav-title" data-en="Site Navigation" data-lv="Vietnes navigācija" class="text-xl font-extrabold tracking-widest uppercase text-brand-KaraliskiZeltainais flex items-center justify-center gap-2">
+                                    <span class="material-icons text-brand-KaraliskiZeltainais">explore</span> Site Navigation
+                                </span>
+                            </div>
+
+                            <nav class="flex flex-col space-y-3" id="mobile-nav">
+                                <a href="https://example.com/about" target="_blank" rel="noopener noreferrer" data-nav-index="0"
+                                   class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
+                                    <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
+                                        Kuldīgas novads skaitļos
+                                    </span>
+                                    <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+
+                                <a href="https://example.com/opendata" target="_blank" rel="noopener noreferrer" data-nav-index="1"
+                                   class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
+                                    <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
+                                        Iesaisties!
+                                    </span>
+                                    <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+
+                                <a href="https://example.com/services" target="_blank" rel="noopener noreferrer" data-nav-index="2"
+                                   class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
+                                    <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
+                                        Jaunumi
+                                    </span>
+                                    <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+
+                                <a href="https://example.com/contact" target="_blank" rel="noopener noreferrer" data-nav-index="3"
+                                   class="mobile-nav-link group flex items-center justify-between p-4 rounded-2xl bg-brand-Balts/90 border-2 border-neutral-200 hover:border-brand-KaraliskiZeltainais hover:bg-brand-Balts transition-all duration-300 shadow-sm">
+                                    <span class="text-base font-extrabold text-brand-Melns group-hover:text-brand-LVSarkans tracking-wide nav-text">
+                                        Rokasgrāmata
+                                    </span>
+                                    <span class="material-icons text-brand-KaraliskiZeltainais group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </nav>
+
+                            <div class="pt-4 border-t border-neutral-200 space-y-2">
+                                    <div class="text-xs font-bold uppercase tracking-wider text-neutral-500">
+                                        <span class="text-left">Valoda</span>
+                                        <span class="text-right">Language</span>
+                                    </div>
+                                        <div class="flex flex-col grid grid-cols-2 gap-2" id="mobile-lang-container">
+                                            <button type="button" data-lang="LV" class="mobile-lang-btn py-3 rounded-xl border-2 border-neutral-200 bg-brand-Balts text-xs font-extrabold uppercase tracking-wider text-brand-Melns hover:border-brand-KaraliskiZeltainais transition-all shadow-sm">
+                                                LV
+                                            </button>
+                                            <button type="button" data-lang="EN" class="mobile-lang-btn py-3 rounded-xl border-2 border-neutral-200 bg-brand-Balts text-xs font-extrabold uppercase tracking-wider text-brand-Melns hover:border-brand-KaraliskiZeltainais transition-all shadow-sm">
+                                                EN
+                                            </button>
+                                        </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Thematic maps grid -->
-        <div class="flex flex-wrap justify-center gap-8" id="map-grid">
-            <!-- Map cards are dynamically loaded via external JSON -->
-        </div>
-
-        <!-- No results placeholder -->
-        <div id="no-results" class="hidden text-center py-16">
-            <p class="text-neutral-500 font-bold text-sm uppercase tracking-wider">No maps found matching your search or filters.</p>
-        </div>
-    </main>
-
-    <!-- Footer section -->
-    <footer class="relative z-40 bg-brand-Melns text-brand-Balts py-10 md:py-12 border-t-4 border-brand-KaraliskiZeltainais mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center justify-center text-center space-y-5">
-				<div class="flex items-center gap-3">
-					<a href="#" class="w-14 h-14 block focus:outline-none">
-						<img id="footer-logo" 
-							 src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_gaiss.svg" 
-							 alt="Kuldiga Logo" 
-							 class="w-full h-full object-contain transition-transform hover:scale-125">
-					</a>
-					<span id="footer-title" data-en="Geo Kuldīga" data-lv="Geo Kuldīga" class="text-2xl font-extrabold text-brand-Balts tracking-wide uppercase">Geo Kuldīga</span>
-				</div>
-                <div class="w-80 h-0.5 bg-brand-KaraliskiZeltainais"></div>
-				<p id="footer-copy" data-en="&copy; Geo Kuldīga <span id='copyright-year'></span>. All rights reserved." data-lv="&copy; Geo Kuldīga <span id='copyright-year'></span>. Visas tiesības paturētas." class="text-xs font-semibold text-neutral-300">
-					&copy; Geo Kuldīga <span id="copyright-year"></span>. All rights reserved.
-				</p>
-                <div class="flex-justify flex-col items-center space-x-5">
-                    <a href="#privacy-policy" id="footer-privacy-btn" data-en="Privacy Policy" data-lv="Privātuma politika" class="text-xs text-neutral-400 hover:text-brand-KaraliskiZeltainais transition-colors">
-                        Privacy Policy
-                    </a>
-					<a href="#cookies" id="footer-cookies-btn" data-en="Cookies" data-lv="Sīkdatņu politika" class="text-xs text-neutral-400 hover:text-brand-KaraliskiZeltainais transition-colors">
-						Cookies
-					</a>
-				</div>
+        <!-- Floating search bar -->
+        <div id="floating-search-bar" 
+             class="fixed left-6 top-28 z-40 w-80 bg-brand-Balts border-2 border-brand-KaraliskiZeltainais rounded-2xl shadow-2xl p-4 transform -translate-x-96 opacity-0 pointer-events-none transition-all duration-700 ease-in-out">
+            <div class="bg-brand-Balts flex items-center justify-between mb-3 border-b border-brand-KaraliskiZeltainais/30 pb-2">
+                <span id="map-search-title" data-en="Map Search" data-lv="Karšu meklētājs" class="bg-brand-Balts text-xs font-bold tracking-widest text-brand-KaraliskiZeltainais flex items-center gap-2">
+                     Map Search
+                </span>
+                <button id="close-floating-search" class="bg-brand-Balts text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
+                    <span class="material-icons text-xs">close</span>
+                </button>
+            </div>
+            <div class="relative flex items-center">
+                <span class="material-icons absolute left-3 text-brand-KaraliskiZeltainais text-sm">search</span>
+                <input type="text" 
+                       id="map-search-input" 
+                       placeholder="Search maps by title or keyword..." 
+                       class="w-full pl-9 pr-8 py-2 rounded-xl bg-brand-Balts border border-neutral-700 text-brand-Melns placeholder-neutral-400 text-xs font-medium focus:outline-none focus:border-brand-KaraliskiZeltainais transition-colors">
+                <button id="clear-search-btn" class="hidden absolute right-3 text-neutral-400 hover:text-brand-Melns text-xs flex items-center">
+                    <span class="material-icons text-xs">close</span>
+                </button>
             </div>
         </div>
-    </footer>
+
+        <!-- Hero section -->
+        <section id="hero" class="py-12 md:py-16 bg-brand-Melns border-brand-KaraliskiZeltainais border-b-[4px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-Left space-y-3">
+                <h1 id="hero-title" data-en="Geo Kuldīga" data-lv="Geo Kuldīga" class="text-3xl sm:text-5xl font-black text-brand-Balts tracking-tight uppercase">
+                    Geo Kuldīga
+                </h1>
+                <h3 id="hero-desc" data-en="The Kuldiga Municipality data publishing portal, where anyone can view and use the geospatial information about the administrative territory of Kuldiga held by the municipality." data-lv="Kuldīgas novada pašvaldības datu publicēšanas portāls, kurā ikviens var apskatīt un lietot pašvaldības rīcībā esošo ģeotelpisko informāciju par Kuldīgas novada administratīvo teritoriju." class="md:text-lg text-sm text-brand-Balts tracking-tight text-justify font-bold md:w-1/2">
+                    The Kuldiga Municipality data publishing portal, where anyone can view and use the geospatial information about the administrative territory of Kuldiga held by the municipality.
+                </h3>
+            </div>
+        </section>
+
+        <!-- Highlights slideshow section -->
+        <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <!-- Section Header -->
+            <div class="mb-6">
+                <h2 id="highlights-title" data-en="Highlights" data-lv="Aktualitātes" class="md:text-4xl text-3xl md:text-center text-center font-extrabold text-brand-Melns tracking-tight gap-2">
+                    Highlights
+                </h2>
+            </div>
+
+            <!-- Slideshow wrapper with side navigation buttons -->
+            <div class="relative flex items-center gap-2 sm:gap-4">
+                <!-- Left Side: Prev button -->
+                <button id="highlight-prev" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-Balts border border-brand-Melns text-brand-Melns flex items-center justify-center z-10">
+                    <span class="material-icons text-l">chevron_left</span>
+                </button>
+
+                <!-- Slideshow container -->
+                <div id="highlights-container" class="flex-grow flex overflow-x-auto no-scrollbar scroll-smooth py-1 px-0">
+                    <!-- Dynamically populated via external JSON -->
+                </div>
+
+                <!-- Right side: Next button -->
+                <button id="highlight-next" class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-Balts border border-brand-Melns text-brand-Melns flex items-center justify-center z-10">
+                    <span class="material-icons text-2xl">chevron_right</span>
+                </button>
+            </div>
+            
+            <!-- Highlights page indicator dots -->
+            <div id="highlights-pagination" class="flex justify-center items-center gap-2 mt-6">
+            </div>
+        </section>
+
+        <!-- Main content: Thematic Maps -->
+        <main id="thematic-maps" class="flex-grow py-9 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            
+            <!-- Filter controls -->
+            <div class="flex flex-row items-center justify-between pb-8 mb-8 border-b-2 border-brand-KaraliskiZeltainais gap-4">
+                <div>
+                    <h2 id="maps-title" data-en="Thematic Maps" data-lv="Tematiskās kartes" class="md:text-5xl text-4xl md:text-left text-left font-extrabold text-brand-Melns tracking-tight flex gap-2">
+                        Thematic Maps
+                    </h2>
+                    <p id="maps-desc" data-en="Click on any map thumbnail below to open the full size map." data-lv="Noklikšķiniet uz jebkuras kartes attēlu, lai atvērtu karti pilnā izmērā." class="md:text-lg text-[8px] md:text-left text-left text-neutral-500 mt-1">Click on any map thumbnail below to open the full size map.</p>
+                </div>
+
+                <!-- Dynamic filters drop-down -->
+                <div class="relative inline-block text-left" id="filters-dropdown-wrapper">
+                    <button id="filters-toggle-btn" 
+                            type="button" 
+                            class="inline-flex items-center justify-between rounded-xl bg-brand-Balts border-2 border-black gap-3 px-3 py-2.5 text-brand-Melns font-bold text-xs tracking-wider">
+                        <span class="flex items-center gap-2">
+                            <span class="material-icons">filter_alt</span>
+                        </span>
+                        <span class="material-icons transition-transform duration-300" id="filters-chevron">expand_more</span>
+                    </button>
+
+                    <!-- Checkbox drop-down menu -->
+                    <div id="filters-menu" 
+                         class="hidden absolute right-0 mt-3 w-60 rounded-2xl bg-brand-Balts border-2 border-black shadow-2xl z-50 overflow-hidden transform transition-all duration-200 divide-y divide-neutral-200">
+                        <div id="dynamic-filter-checkboxes" class="p-3.5 space-y-2.5">
+                        </div>
+                        <div class="p-2.5 bg-neutral-50 flex items-center justify-between">
+                            <button id="clear-filters-btn" type="button" class="text-[11px] font-bold text-brand-KaraliskiZeltainais hover:underline px-1">
+                                Clear Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thematic maps grid -->
+            <div class="flex flex-wrap justify-center gap-8" id="map-grid">
+                <!-- Map cards are dynamically loaded via external JSON -->
+            </div>
+
+            <!-- No results placeholder -->
+            <div id="no-results" class="hidden text-center py-16">
+                <p class="text-neutral-500 font-bold text-sm uppercase tracking-wider">No maps found matching your search or filters.</p>
+            </div>
+        </main>
+
+        <!-- Footer section -->
+        <footer class="relative z-40 bg-brand-DakstinuOkeris text-brand-Balts py-10 md:py-12 border-t-4 border-brand-DakstinuOkeris mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-center text-center space-y-5">
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-14 h-14 block focus:outline-none">
+                            <img id="footer-logo" 
+                                 src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_gaiss.svg" 
+                                 alt="Kuldiga Logo" 
+                                 class="w-full h-full object-contain transition-transform hover:scale-125">
+                        </a>
+                        <span id="footer-title" data-en="Geo Kuldīga" data-lv="Geo Kuldīga" class="text-2xl font-extrabold text-brand-Balts tracking-wide uppercase">Geo Kuldīga</span>
+                    </div>
+                    <div class="w-80 h-0.5 bg-brand-KaraliskiZeltainais"></div>
+                    <p id="footer-copy" data-en="&copy; Geo Kuldīga <span id='copyright-year'></span>. All rights reserved." data-lv="&copy; Geo Kuldīga <span id='copyright-year'></span>. Visas tiesības paturētas." class="text-xs font-semibold text-neutral-300">
+                        &copy; Geo Kuldīga <span id="copyright-year"></span>. All rights reserved.
+                    </p>
+                    <div class="flex-justify flex-col items-center space-x-5">
+                        <a href="#privacy-policy" id="footer-privacy-btn" data-en="Privacy Policy" data-lv="Privātuma politika" class="text-xs text-neutral-400 hover:text-brand-KaraliskiZeltainais transition-colors">
+                            Privacy Policy
+                        </a>
+                        <a href="#cookies" id="footer-cookies-btn" data-en="Cookies" data-lv="Sīkdatņu politika" class="text-xs text-neutral-400 hover:text-brand-KaraliskiZeltainais transition-colors">
+                            Cookies
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center space-x-4 pt-2 text-s">
+                        <a href="https://www.facebook.com/kuldigalv" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-brand-KaraliskiZeltainais transition-colors" aria-label="Facebook">
+                            <span class="material-icons">facebook</span>
+                        </a>
+                        <a href="https://www.x.com/kuldigalv" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-brand-KaraliskiZeltainais transition-colors" aria-label="X">
+                            <span class="material-icons">close</span>
+                        </a>
+                        <a href="https://www.instagram.com/kuldigalv/" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-brand-KaraliskiZeltainais transition-colors" aria-label="Instagram">
+                            <span class="material-icons">photo_camera</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC2tM0lrxWZb0ur6lw77Wjjw" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-brand-KaraliskiZeltainais transition-colors" aria-label="YouTube">
+                            <span class="material-icons">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- End of Page Content Wrapper -->
 
     <!-- Interactivity & external JSON fetch -->
     <script>
@@ -451,7 +540,17 @@
 				const MapSearchTitle = document.getElementById('map-search-title');
 				if (MapSearchTitle) MapSearchTitle.textContent = lang === 'EN' ? MapSearchTitle.getAttribute('data-en') : MapSearchTitle.getAttribute('data-lv');
 
-                // 7. Footer Section
+                // 7. Accessibility Menu Localized Texts
+                const accessMenu = document.getElementById('accessibility-menu');
+                if (accessMenu) {
+                    const translatableElements = accessMenu.querySelectorAll('[data-en], [data-lv]');
+                    translatableElements.forEach(el => {
+                        const tText = lang === 'EN' ? el.getAttribute('data-en') : el.getAttribute('data-lv');
+                        if (tText) el.textContent = tText;
+                    });
+                }
+
+                // 8. Footer Section
                 const footerTitle = document.getElementById('footer-title');
                 const footerCopy = document.getElementById('footer-copy');
                 const footerPrivacyBtn = document.getElementById('footer-privacy-btn');
@@ -557,7 +656,7 @@
 
                         slideItem.innerHTML = `
                             <a href="${item.mapUrl}" target="_blank" rel="noopener noreferrer" class="block w-full">
-                                <div class="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border-[3px] border-brand-KaraliskiZeltainais shadow-md group-hover:border-brand-LVSarkans transition-all duration-300">
+                                <div class="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
                                     <img src="${item.imageUrl}" 
                                          alt="${title}" 
                                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -568,7 +667,7 @@
                                 </div>
                             </a>
                             <div class="mt-2.5 text-center w-full px-1">
-                                <h3 class="text-xs font-extrabold text-brand-Melns transition-colors tracking-tight uppercase truncate text-center">
+                                <h3 class="text-xs text-brand-Melns transition-colors tracking-tight truncate text-center">
                                     ${title}
                                 </h3>
                             </div>
@@ -621,7 +720,7 @@
                 }
             }
 
-            // Navigation buttons
+            // Navigation buttons (with wrapping loop)
 			highlightPrev?.addEventListener('click', () => {
                 if (totalHighlightPages > 0) {
                     if (currentHighlightPage > 0) {
@@ -685,7 +784,7 @@
 
                     card.innerHTML = `
                         <a href="${item.mapUrl}" target="_blank" rel="noopener noreferrer" class="block">
-                            <div class="relative aspect-square w-full rounded-2xl overflow-hidden border-[4px] hover:scale-105 border-brand-KaraliskiZeltainais shadow-md hover:border-brand-LVSarkans transition-all duration-300">
+                            <div class="relative aspect-square w-full rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300">
                                 <img src="${item.imageUrl}" 
                                      alt="${title}" 
                                      class="w-full h-full object-cover transition-transform duration-300"
@@ -761,7 +860,7 @@
                 floatingSearchBar.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
                 
                 searchIcon.textContent = 'close';
-                searchToggleBtn.classList.add('bg-brand-LVSarkans');
+                searchToggleBtn.classList.add('');
                 setTimeout(() => mapSearchInput.focus(), 300);
             }
 
@@ -846,6 +945,11 @@
 					filtersMenu?.classList.add('hidden');
 					filtersChevron?.classList.remove('rotate-180');
 				}
+                const accessContainer = document.getElementById('accessibility-container');
+                const accessMenu = document.getElementById('accessibility-menu');
+                if (accessContainer && !accessContainer.contains(e.target)) {
+                    accessMenu.classList.add('hidden');
+                }
             });
 
             // Close overlay on clicking mobile links
@@ -866,7 +970,7 @@
 					filtersMenu.classList.add('hidden');
 					filtersChevron.classList.remove('rotate-180');
 				}
-			});
+            });
 
             // Combined filtering & search
             function applyFiltersAndSearch() {
@@ -911,6 +1015,88 @@
             clearFiltersBtn?.addEventListener('click', () => {
                 document.querySelectorAll('.filter-checkbox').forEach(cb => cb.checked = false);
                 applyFiltersAndSearch();
+            });
+
+            // --- ACCESSIBILITY WIDGET LOGIC ---
+            const accessToggleBtn = document.getElementById('accessibility-toggle-btn');
+            const accessibilityMenu = document.getElementById('accessibility-menu');
+
+            accessToggleBtn?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                accessibilityMenu.classList.toggle('hidden');
+            });
+
+            let textScaleLevel = 0; // 0: default, 1: large, 2: extra large
+
+            function updateTextScale() {
+                document.body.classList.remove('access-text-lg', 'access-text-xl');
+                if (textScaleLevel === 1) {
+                    document.body.classList.add('access-text-lg');
+                } else if (textScaleLevel === 2) {
+                    document.body.classList.add('access-text-xl');
+                }
+            }
+
+            document.getElementById('access-larger')?.addEventListener('click', () => {
+                if (textScaleLevel < 2) {
+                    textScaleLevel++;
+                    updateTextScale();
+                }
+            });
+
+            document.getElementById('access-smaller')?.addEventListener('click', () => {
+                if (textScaleLevel > 0) {
+                    textScaleLevel--;
+                    updateTextScale();
+                }
+            });
+
+            function setExclusiveVisualMode(mode) {
+                const isGrayscaleActive = document.body.classList.contains('access-melnbalts');
+                const isHighContrastActive = document.body.classList.contains('access-high-contrast');
+                const isNegContrastActive = document.body.classList.contains('access-neg-contrast');
+
+                // Clear all mutually exclusive modes from the body
+                document.body.classList.remove('access-melnbalts', 'access-high-contrast', 'access-neg-contrast');
+
+                if (mode === 'grayscale' && !isGrayscaleActive) {
+                    document.body.classList.add('access-melnbalts');
+                } else if (mode === 'contrast' && !isHighContrastActive) {
+                    document.body.classList.add('access-high-contrast');
+                } else if (mode === 'neg-contrast' && !isNegContrastActive) {
+                    document.body.classList.add('access-neg-contrast');
+                }
+            }
+
+            document.getElementById('access-grayscale')?.addEventListener('click', (e) => {
+                e.preventDefault();
+                setExclusiveVisualMode('grayscale');
+            });
+
+            document.getElementById('access-contrast')?.addEventListener('click', () => {
+                setExclusiveVisualMode('contrast');
+            });
+
+            document.getElementById('access-neg-contrast')?.addEventListener('click', () => {
+                setExclusiveVisualMode('neg-contrast');
+            });
+
+            document.getElementById('access-underline')?.addEventListener('click', () => {
+                document.body.classList.toggle('access-underline-links');
+            });
+
+            document.getElementById('access-bold')?.addEventListener('click', () => {
+                document.body.classList.toggle('access-bold-text');
+            });
+
+            document.getElementById('access-reset')?.addEventListener('click', () => {
+                textScaleLevel = 0;
+                document.body.classList.remove(
+                    'access-text-lg', 'access-text-xl', 
+                    'access-melnbalts', 'access-high-contrast', 'access-neg-contrast', 
+                    'access-underline-links', 'access-bold-text'
+                );
+                accessibilityMenu.classList.add('hidden');
             });
         });
     </script>
