@@ -9,7 +9,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Pamatdati.png",
+    "imageUrl": "./mapcard-img/Pamatdati.png",
     "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=c2146a7a53974113aa12e11e97e7ef30"
   },
   {
@@ -21,7 +21,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Teritorijas%20pl%C4%81nojums.png",
+    "imageUrl": "./mapcard-img/Teritorijas_planojums.png",
     "mapUrl": "https://experience.arcgis.com/experience/ff4d2c36f74f460c9819569adaaac27f"
   },
   {
@@ -33,7 +33,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -45,7 +45,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/St%C4%81vvietas.png",
+    "imageUrl": "./mapcard-img/Stavvietas.png",
     "mapUrl": "https://www.google.com/maps/d/u/1/viewer?hl=en&ll=56.96795500577736%2C21.963918497260728&z=15&mid=1gzJES1OBDs1GuIv2jLB-kTcgJrgj0O90"
   },
   {
@@ -57,7 +57,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -69,7 +69,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -81,7 +81,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kaps%C4%93tas.png",
+    "imageUrl": "./mapcard-img/Kapsetas.png",
     "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=28878e46ecb54c178cd50ac500f63464"
   },
   {
@@ -93,7 +93,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -105,7 +105,7 @@
     "categoryLabelLv": "Vēsture",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -117,7 +117,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -129,7 +129,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -141,7 +141,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Uz%C5%86%C4%93m%C4%93ju%20katalogs.png",
+    "imageUrl": "./mapcard-img/Uznemeju_katalogs.png",
     "mapUrl": "https://experience.arcgis.com/experience/142bd46b212240d8a8e01caf536e4b7c"
   },
   {
@@ -153,7 +153,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -165,7 +165,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -177,7 +177,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Pl%C4%81notie%20v%C4%93ja%20un%20saules%20parki.png",
+    "imageUrl": "./mapcard-img/Planotie_veja_un_saules_parki.png",
     "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=55927e8f12fd48359b14f55cf0fc5429"
   },
   {
@@ -189,7 +189,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -201,7 +201,7 @@
     "categoryLabelLv": "Kultūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -213,7 +213,7 @@
     "categoryLabelLv": "Kultūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -225,7 +225,7 @@
     "categoryLabelLv": "Infrastruktūra",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   },
   {
@@ -237,7 +237,7 @@
     "categoryLabelLv": "Attīstība",
     "descriptionEn": "-",
     "descriptionLv": "-",
-    "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+    "imageUrl": "./test-hero.png",
     "mapUrl": "#"
   }
 ],
@@ -246,35 +246,35 @@
       "id": 101,
       "titleEn": "Participatory Budget",
       "titleLv": "Līdzdalības budžets",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "imageUrl": "./test-hero.png",
       "mapUrl": "#"
     },
     {
       "id": 102,
       "titleEn": "Cultural and Historical Environment (UNESCO)",
       "titleLv": "Kultūrvēsturiskā vide (UNESCO)",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "imageUrl": "./test-hero.png",
       "mapUrl": "#"
     },
     {
       "id": 103,
       "titleEn": "Civil Protection",
       "titleLv": "Civilā aizsardzība",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "imageUrl": "./test-hero.png",
       "mapUrl": "#"
     },
     {
       "id": 104,
       "titleEn": "Cultural Sites in the Municipality",
       "titleLv": "Kultūrvietas novadā",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/Kult%C5%ABrv%C4%93sturisk%C4%81%20vide%20%2B%20unesco%20teritorija.png",
+      "imageUrl": "./mapcard-img/Kulturvesturiska_vide_unesco_teritorija.png",
       "mapUrl": "https://kuldiga.maps.arcgis.com/apps/mapviewer/index.html?webmap=8818df4472bd46739f556ad53a302bc3"
     },
     {
       "id": 105,
       "titleEn": "School Bus Routes",
       "titleLv": "Skolēnu autobusu maršruti",
-      "imageUrl": "https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png",
+      "imageUrl": "./test-hero.png",
       "mapUrl": "#"
     }
   ]
