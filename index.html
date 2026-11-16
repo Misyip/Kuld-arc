@@ -33,7 +33,7 @@
     </script>
     <style>
         #hero {
-            background-image: url("https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/test-hero.png");
+            background-image: url("./test-hero.png");
 			background-repeat: no-repeat;
 			background-position: center;
             background-size: cover;
@@ -152,7 +152,7 @@
                     <a href="https://kuldigasnovads.lv/" class="flex items-center gap-3.5 group flex-shrink-0">
                         <div class="w-14 h-14 block focus:outline-none">
                             <img id="header-logo" 
-                                 src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_melns.svg" 
+                                 src="./svg/CROP_Kuldiga_simbols_melns.svg" 
                                  alt="Kuldiga Logo" 
                                  class="w-full h-full object-contain transition-transform hover:scale-125">
                         </div>
@@ -410,7 +410,7 @@
                     <div class="flex items-center gap-3">
                         <a href="#" class="w-14 h-14 block focus:outline-none">
                             <img id="footer-logo" 
-                                 src="https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/CROP%20Kuldiga_simbols_gaiss.svg" 
+                                 src="./svg/CROP_Kuldiga_simbols_gaiss.svg" 
                                  alt="Kuldiga Logo" 
                                  class="w-full h-full object-contain transition-transform hover:scale-125">
                         </a>
@@ -828,7 +828,7 @@
             }
 
             // 3. Fetch JSON data
-            const jsonFileUrl = 'https://raw.githubusercontent.com/Misyip/Kuld-arc/refs/heads/main/maps.json'; 
+            const jsonFileUrl = './maps.json'; 
 
             fetch(jsonFileUrl)
                 .then(response => {
